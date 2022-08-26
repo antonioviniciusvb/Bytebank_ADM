@@ -28,7 +28,7 @@ namespace Bytebank_ADM.Funcionarios
         /// Método para obter a Bonificação do Funcionario
         /// </summary>
         /// <returns></returns>
-        public virtual double GetBonificacao()
+        public double GetBonificacao()
         {
             return Salario * 0.1;
         }
