@@ -8,7 +8,7 @@ namespace Bytebank_ADM.Funcionarios
 {
     public class Diretor : Funcionario
     {
-        public new double GetBonificacao()
+        public override double GetBonificacao()
         {
             return Salario;
         }
