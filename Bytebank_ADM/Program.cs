@@ -1,7 +1,9 @@
-﻿using bytebank;
-using Bytebank_ADM.Funcionarios;
+﻿using Bytebank_ADM.Funcionarios;
+using Bytebank_ADM.Utilitarios;
 
 Console.WriteLine("Boas Vindas, ao ByteBank Administração.");
+
+Util.PularLinhas();
 
 Funcionario funcionario = new()
 {
@@ -19,8 +21,17 @@ Diretor diretor = new()
 
 Console.WriteLine($"Funcionário - Bonificação: {funcionario.GetBonificacao():c}");
 
+Console.WriteLine($"Diretor - Bonificação: {diretor.GetBonificacao():c}");
+
+GerenciadorDeBonificacao registrador = new();
+
+registrador.Registrar(funcionario);
+
+registrador.Registrar(diretor);
+
 Util.PularLinhas(2);
 
-Console.WriteLine($"Diretor - Bonificação: {diretor.GetBonificacao():c}");
+Console.WriteLine($"Total de Bonificações: {registrador.GetBonificacao():c}");
+
 
 Console.ReadKey();
