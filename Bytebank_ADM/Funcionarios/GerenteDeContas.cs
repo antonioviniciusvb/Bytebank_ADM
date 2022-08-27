@@ -8,18 +8,18 @@ namespace Bytebank_ADM.Funcionarios
 {
     public class GerenteDeContas : Funcionario
     {
-        public GerenteDeContas(string cpf, string nome, double salario) : base(cpf, nome, 4000)
+        public GerenteDeContas(string cpf, string nome) : base(cpf, nome, 4000)
         {
         }
 
         public override double GetBonificacao()
         {
-            return Salario *= 1.25;
+            return Salario * 0.25;
         }
 
         public override void AumentaSalario()
         {
-            Salario *= 0.05;
+            Salario *= 1.05;
         }
     }
 }

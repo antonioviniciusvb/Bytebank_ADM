@@ -8,13 +8,13 @@ namespace Bytebank_ADM.Funcionarios
 {
     public class Designer : Funcionario
     {
-        public Designer(string cpf, string nome, double salario) : base(cpf, nome, 3000)
+        public Designer(string cpf, string nome) : base(cpf, nome, 3000)
         {
         }
 
         public override double GetBonificacao()
         {
-            return Salario * 1.17;
+            return Salario * 0.17;
         }
 
         public override void AumentaSalario()

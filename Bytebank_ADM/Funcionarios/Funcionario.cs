@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Bytebank_ADM.Funcionarios
 {
-    public class Funcionario
+    public abstract class Funcionario
     {
         /// <summary>
         /// Construtor da classe
