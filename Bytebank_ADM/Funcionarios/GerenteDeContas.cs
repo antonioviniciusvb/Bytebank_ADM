@@ -6,22 +6,20 @@ using System.Threading.Tasks;
 
 namespace Bytebank_ADM.Funcionarios
 {
-    public class Diretor : Funcionario
+    public class GerenteDeContas : Funcionario
     {
-        public Diretor(string cpf, string nome, double salario):base(cpf, nome, 5000)
+        public GerenteDeContas(string cpf, string nome, double salario) : base(cpf, nome, 4000)
         {
-
         }
 
         public override double GetBonificacao()
         {
-            return Salario *= 0.5;
+            return Salario *= 1.25;
         }
 
         public override void AumentaSalario()
         {
-            Salario *= 1.15;
+            Salario *= 0.05;
         }
-
     }
 }
