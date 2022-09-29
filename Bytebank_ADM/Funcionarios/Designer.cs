@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Bytebank_ADM.Funcionarios
 {
-    public class Designer : Funcionario
+    public class Designer : Funcionario, IBonificavel
     {
         public Designer(string cpf, string nome) : base(cpf, nome, 3000)
         {
         }
 
-        public override double GetBonificacao()
+        public double GetBonificacao()
         {
             return Salario * 0.17;
         }
