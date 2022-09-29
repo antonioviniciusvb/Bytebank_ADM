@@ -14,6 +14,8 @@ Auxiliar auxiliar = new(nome: "Carlos Neves", cpf: "475.176.171-99");
 
 GerenteDeContas gerente = new(nome: "Carla Nunes", cpf: "143.222.777-33");
 
+Desenvolvedor dev = new(nome: "Vinicius", cpf: "351.145.784-74");
+
 diretor.AumentaSalario();
 
 auxiliar.AumentaSalario();
@@ -50,12 +52,21 @@ Console.WriteLine($"Nome: {gerente.Nome}" + Environment.NewLine +
                   $"Salario: {gerente.Salario:c}");
 
 
+Util.PularLinhas(2);
+
+Console.WriteLine($"Desenvolvedor - Bonificação: {dev.GetBonificacao():c}");
+Console.WriteLine($"Nome: {dev.Nome}" + Environment.NewLine +
+                  $"Cpf: {dev.Cpf}" + Environment.NewLine +
+                  $"Salario: {dev.Salario:c}");
+
 
 GerenciadorDeBonificacao registrador = new();
 
 registrador.Registrar(designer);
 
 registrador.Registrar(diretor);
+
+registrador.Registrar(dev);
 
 Util.PularLinhas(2);
 
