@@ -1,4 +1,6 @@
 ﻿using Bytebank_ADM.Funcionarios;
+using Bytebank_ADM.ParceriaComercial;
+using Bytebank_ADM.SistemaInterno;
 using Bytebank_ADM.Utilitarios;
 using System.Security.Cryptography;
 
@@ -9,10 +11,14 @@ Util.PularLinhas();
 Designer designer = new(nome: "Antonio Vinicius", cpf: "111.111.111-11");
 
 Diretor diretor = new(nome: "Bill Gates", cpf: "155.141.178-81");
+diretor.Login = "billg";
+diretor.Senha = "14789";
 
 Auxiliar auxiliar = new(nome: "Carlos Neves", cpf: "475.176.171-99");
 
 GerenteDeContas gerente = new(nome: "Carla Nunes", cpf: "143.222.777-33");
+gerente.Login = "caln";
+gerente.Senha = "124568";
 
 Desenvolvedor dev = new(nome: "Vinicius", cpf: "351.145.784-74");
 
@@ -73,6 +79,21 @@ Util.PularLinhas(2);
 Console.WriteLine($"Total de Bonificações: {registrador.GetBonificacao():c}");
 
 Console.WriteLine(Funcionario.TotalFuncionarios);
+
+
+Util.PularLinhas(2);
+
+SistemaInterno system = new SistemaInterno();
+
+system.Logar(diretor, "billg", "14789");
+system.Logar(gerente, "caln", "124568");
+
+
+Parceiro parceiro = new();
+parceiro.Login = "att";
+parceiro.Senha = "789";
+
+system.Logar(parceiro, "att", "789");
 
 
 Console.ReadKey();

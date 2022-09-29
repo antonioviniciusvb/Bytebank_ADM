@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bytebank_ADM.Funcionarios
 {
-    public class Desenvolvedor:Funcionario
+    public class Desenvolvedor:Funcionario, IBonificavel
     {
 
         public Desenvolvedor(string cpf, string nome):base(cpf,nome, 3000)
@@ -19,7 +19,7 @@ namespace Bytebank_ADM.Funcionarios
             Salario *= 0.15;
         }
 
-        public override double GetBonificacao()
+        public double GetBonificacao()
         {
             return Salario * 0.1;
         }

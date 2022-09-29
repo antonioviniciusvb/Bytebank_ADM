@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Bytebank_ADM.Funcionarios
 {
-    public class GerenteDeContas : Funcionario
+    public class GerenteDeContas : FuncionarioAutentivel, IBonificavel
     {
         public GerenteDeContas(string cpf, string nome) : base(cpf, nome, 4000)
         {
         }
 
-        public override double GetBonificacao()
+        public double GetBonificacao()
         {
             return Salario * 0.25;
         }
@@ -21,5 +22,6 @@ namespace Bytebank_ADM.Funcionarios
         {
             Salario *= 1.05;
         }
+
     }
 }

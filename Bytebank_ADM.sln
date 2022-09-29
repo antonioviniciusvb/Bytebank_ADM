@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bytebank_ADM", "Bytebank_ADM\Bytebank_ADM.csproj", "{3304B8ED-7B3F-494D-A169-BC19195A6B31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bytebank_ADM", "Bytebank_ADM\Bytebank_ADM.csproj", "{3304B8ED-7B3F-494D-A169-BC19195A6B31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

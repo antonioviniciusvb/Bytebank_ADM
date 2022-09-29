@@ -32,14 +32,10 @@ namespace Bytebank_ADM.Funcionarios
         public double Salario { get;protected set; }
 
         /// <summary>
-        /// Método para obter a Bonificação do Funcionario
-        /// </summary>
-        /// <returns></returns>
-        public abstract double GetBonificacao();
-
-        /// <summary>
         /// Método para aumentar sálario de funcionario s
         /// </summary>
         public abstract void AumentaSalario();
+
+
     }
 }
